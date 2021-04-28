@@ -8,6 +8,7 @@ import logoDjango from './svg/django.png';
 import reportWebVitals from './reportWebVitals';
 import logoReact from './svg/react.svg';
 import Home from './components/home';
+import Uploadf from './components/uploadfile';
 import App from './app';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +21,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  
 
   <App/>
+
+
+<Uploadf/>
 
 
   </Jumbotron>
