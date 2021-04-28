@@ -24,6 +24,16 @@ services:
         networks: 
             - front-networks
 
+    reactapp:
+        build:
+            context: .
+            dockerfile: dockerReact/Dockerfile
+        ports:
+            - 3030:3000
+        networks: 
+            - front-networks
+
+
 networks: 
     front-networks:
         driver: bridge
