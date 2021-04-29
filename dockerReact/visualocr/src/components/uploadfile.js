@@ -54,6 +54,7 @@ class App extends Component {
 			
 <p>Type du fichier: {this.state.selectedFile.type}</p>
 
+<image src= {this.state.selectedFile}/>
 			
 <p>
 			Derniere modification:{" "}

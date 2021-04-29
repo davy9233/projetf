@@ -17,9 +17,20 @@ RUN npm -g install create-react-app  -y\
 
 WORKDIR /app/appreact
 
+
+COPY ./dockerReact/visualocr/package.json ./
+COPY ./dockerReact/visualocr/package-lock.json ./
+RUN mkdir /public
+COPY ./dockerReact/visualocr/public/ ./public/
+RUN mkdir /src
+COPY ./dockerReact/visualocr/src/ ./src/
+RUN npm install
+
+
 EXPOSE 3000
 
-CMD ["npm","start"]
 
+
+CMD ["npm", "start"] 
 
 

@@ -1,18 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from '../node_modules/react-dom';
 import './index.css';
-import {Container,Row,Col,Image,Jumbotron} from 'react-bootstrap';
+import {Container,Row,Col,Image,Jumbotron} from '../node_modules/react-bootstrap';
 import logoPython from './svg/python.png';
 import logoPytorch from './svg/pytorch.png';
 import logoDjango from './svg/django.png';
 import reportWebVitals from './reportWebVitals';
 import logoReact from './svg/react.svg';
-import Home from './components/home';
-import Uploadf from './components/uploadfile';
-import App from './app';
+import LoginForm from './components/login';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+ 
  ReactDOM.render(
   <React.StrictMode>
   
@@ -20,10 +18,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   <h1>Application de controle de tickets</h1>
  
 
-  <App/>
+ <LoginForm/>
 
-
-<Uploadf/>
 
 
   </Jumbotron>
