@@ -80,14 +80,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# info database avec le docker
+#'USER': 'sa',
+#'PASSWORD': '<YourStrong@Passw0rd>',
+#'HOST': '10.5.0.5',
+#'PORT': '1433',
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'USER': 'sa',
-        'PASSWORD': '<YourStrong@Passw0rd>',
+        'USER': 'test',
+        'PASSWORD': 'catalan',
         'NAME':'dbscan',
-        'HOST': '10.5.0.5',
-        'PORT': '1433',
+        'HOST': 'MSI\SQLEXPRESS',
+        'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
         },
