@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i3quj+g1+pa90qn%zs_y#c@c_r3%@l_yay321s%!$#n@t#t5hc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -84,9 +84,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'USER': 'sa',
-        'PASSWORD': 'Pass@word',
-        'HOST': 'local',
-        'PORT': '5433',
+        'PASSWORD': '<YourStrong@Passw0rd>',
+        'NAME':'dbscan'
+        'HOST': '',
+        'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
         },

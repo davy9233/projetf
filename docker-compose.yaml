@@ -1,14 +1,18 @@
 version: '3.9'
 services:
     sqldata:
-        image: mcr.microsoft.com/mssql/server:2017-latest
-        environment:
-            - SA_PASSWORD=Pass@word
-            - ACCEPT_EULA=Y
+        build: 
+            context: .
+            dockerfile: dockerSql/Dockerfile
         ports:
             - "5434:1433"
         networks: 
             - front-networks
+        
+        volumes: 
+            - dbdata:/var/lib/mysql
+
+        
     
     
     appdjango:
@@ -23,6 +27,9 @@ services:
 
         networks: 
             - front-networks
+        restart: 
+            - always
+
 
     reactapp:
         build:
@@ -37,3 +44,6 @@ services:
 networks: 
     front-networks:
         driver: bridge
+
+volumes:
+    dbdata:
