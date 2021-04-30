@@ -4,11 +4,13 @@ services:
         build: 
             context: .
             dockerfile: dockerSql/Dockerfile
+        restart: always
         ports:
             - "5434:1433"
         networks: 
-            - front-networks
-        
+            front-networks:
+                ipv4_address: 10.5.0.5
+
         volumes: 
             - dbdata:/var/lib/mysql
 
@@ -19,16 +21,16 @@ services:
         build:
             context: .
             dockerfile: docker/Dockerfile
+        restart: always
         command: python3 manage.py runserver 0.0.0.0:8000
         depends_on: 
             - sqldata
         ports:
             - "8080:8000"
-
         networks: 
-            - front-networks
-        restart: 
-            - always
+            front-networks:
+                    ipv4_address: 10.5.0.6
+        
 
 
     reactapp:
@@ -38,12 +40,17 @@ services:
         ports:
             - 3030:3000
         networks: 
-            - front-networks
+            front-networks:
+                    ipv4_address: 10.5.0.7
 
 
 networks: 
     front-networks:
         driver: bridge
+        ipam:
+            config:
+              - subnet: 10.5.0.0/16
+                gateway: 10.5.0.1
 
 volumes:
     dbdata:

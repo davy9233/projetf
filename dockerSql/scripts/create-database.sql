@@ -2,6 +2,8 @@ CREATE DATABASE dbscan;
 GO
 USE dbscan;
 GO
+
+if not exists (select * from sysobjects where name='user' and xtype='U')
 CREATE TABLE [dbo].[user](
 	[idUser] [int] NOT NULL,
 	[nom] [nvarchar](max) NOT NULL,

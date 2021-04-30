@@ -85,8 +85,8 @@ DATABASES = {
         'ENGINE': 'sql_server.pyodbc',
         'USER': 'sa',
         'PASSWORD': '<YourStrong@Passw0rd>',
-        'NAME':'dbscan'
-        'HOST': '',
+        'NAME':'dbscan',
+        'HOST': '10.5.0.5',
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
