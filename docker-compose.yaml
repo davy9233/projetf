@@ -14,9 +14,21 @@ services:
         volumes: 
             - dbdata:/var/lib/mysql
 
-        
-    
-    
+
+
+    reactapp:
+        build:
+            context: .
+            dockerfile: dockerReact/Dockerfile
+        restart: always
+        ports:
+            - 3030:3000
+        networks: 
+            front-networks:
+                    ipv4_address: 10.5.0.7
+
+
+
     appdjango:
         build:
             context: .
@@ -31,18 +43,6 @@ services:
             front-networks:
                     ipv4_address: 10.5.0.6
         
-
-
-    reactapp:
-        build:
-            context: .
-            dockerfile: dockerReact/Dockerfile
-        ports:
-            - 3030:3000
-        networks: 
-            front-networks:
-                    ipv4_address: 10.5.0.7
-
 
 networks: 
     front-networks:

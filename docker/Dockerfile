@@ -15,9 +15,9 @@ WORKDIR /app
 
 EXPOSE 8000
 
-COPY ./docker/mysite /app
-COPY ./docker/requirements.txt /app/requirements.txt
+COPY ./mysite /app
+COPY ./requirements.txt /app/requirements.txt
 RUN apt-get install unixodbc-dev -y \
-&& pip3 install -r requirements.txt
+&& pip3 install -r requirements.txt  
 
 CMD ["python3","manage.py","runserver"]

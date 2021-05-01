@@ -12,7 +12,9 @@ RUN mkdir -p /app/mssql2019
 
 WORKDIR /app/mssql2019
 
+
 COPY ./dockerSql/scripts/ /app/mssql2019
+COPY ./dockerSql/savdb/ /app/mssql2019
 
 
 

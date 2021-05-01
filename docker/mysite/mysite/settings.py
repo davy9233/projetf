@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home',
     'corsheaders',
     'rest_framework',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -80,13 +81,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# info database avec le docker
-#'USER': 'sa',
-#'PASSWORD': '<YourStrong@Passw0rd>',
-#'HOST': '10.5.0.5',
-#'PORT': '1433',
+#           info database avec le docker
+#DATABASES = {
+#   'default': {
+#       'ENGINE': 'sql_server.pyodbc',
+#
+#           'USER': 'sa',
+#           'PASSWORD': '<YourStrong@Passw0rd>',
+#           'NAME':'dbscan',
+#           'HOST': '10.5.0.5',
+#           'PORT': '1433',
+# 'OPTIONS': {
+#            'driver': 'ODBC Driver 17 for SQL Server',
+#        },
+#    },
+#}  
 
-
+# info database avec le sql local
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
@@ -100,6 +111,25 @@ DATABASES = {
         },
     },
 }  
+
+
+          
+""" DATABASES = {
+   'default': {
+       'ENGINE': 'sql_server.pyodbc',
+           'USER': 'sa',
+           'PASSWORD': '<YourStrong@Passw0rd>',
+           'NAME':'dbscan',
+           'HOST': '10.5.0.5',
+           'PORT': '1433',
+ 'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+    },
+}  
+ """
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
