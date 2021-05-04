@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from '../node_modules/react-dom';
 import './index.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {Container,Row,Col,Image,Jumbotron} from '../node_modules/react-bootstrap';
 import logoPython from './svg/python.png';
 import logoPytorch from './svg/pytorch.png';
@@ -8,6 +9,7 @@ import logoDjango from './svg/django.png';
 import reportWebVitals from './reportWebVitals';
 import logoReact from './svg/react.svg';
 import LoginForm from './components/login';
+
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  
@@ -21,6 +23,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  <LoginForm/>
 
 
+
+  
 
   </Jumbotron>
 

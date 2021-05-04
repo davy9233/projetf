@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'users',
+ 
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,7 +128,7 @@ DATABASES = {
             'driver': 'ODBC Driver 17 for SQL Server',
         },
     },
-}  
+} 
  """
 
 

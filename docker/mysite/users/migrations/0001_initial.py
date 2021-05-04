@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('iduser', models.AutoField(db_column='idUser', primary_key=True, serialize=False)),
                 ('nom', models.TextField()),
                 ('prenom', models.TextField()),
-                ('email', models.TextField()),
+                ('email', models.TextField(unique=True)),
                 ('password', models.TextField()),
             ],
             options={
