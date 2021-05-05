@@ -10,5 +10,5 @@ class User(models.Model):
     password = models.TextField()
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'user'

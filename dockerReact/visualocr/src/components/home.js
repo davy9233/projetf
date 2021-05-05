@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
-import ReactDOM from '../node_modules/react-dom';
-import './index.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import reactDom from 'react-dom';
 
-reactDom.render(
 
-    <h1>accueil</h1>
+export default class Accueil extends Component {
+render(){
+
+
+return(
+    <div>
+    <h1>bonjour</h1>
+
+    <p>vous etes loggue</p>
+</div>
 )
+
+}
+    
+
+
+}
+
+ 

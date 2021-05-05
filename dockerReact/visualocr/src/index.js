@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from '../node_modules/react-dom';
 import './index.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Switch,Link,Redirect } from 'react-router-dom';
 import {Container,Row,Col,Image,Jumbotron} from '../node_modules/react-bootstrap';
 import logoPython from './svg/python.png';
 import logoPytorch from './svg/pytorch.png';
@@ -9,25 +9,34 @@ import logoDjango from './svg/django.png';
 import reportWebVitals from './reportWebVitals';
 import logoReact from './svg/react.svg';
 import LoginForm from './components/login';
-
-
+import Accueil from './components/home';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
- 
- ReactDOM.render(
-  <React.StrictMode>
-  
-  <Jumbotron>
+import reactDom from '../node_modules/react-dom';
+
+
+
+
+ reactDom.render(
+
+<Jumbotron>
   <h1>Application de controle de tickets</h1>
  
 
  <LoginForm/>
+ 
 
 
 
-  
 
   </Jumbotron>
+,document.getElementById('ecranHD'))
 
+
+
+ ReactDOM.render(
+  <React.StrictMode>
+
+  
   <Container>
     <Row>    
       <Col >
@@ -50,6 +59,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
   </React.StrictMode>,
   document.getElementById('logo')
 );
+
+
+
  
 
 
