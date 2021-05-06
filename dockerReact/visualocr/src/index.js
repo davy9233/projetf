@@ -8,27 +8,22 @@ import logoPytorch from './svg/pytorch.png';
 import logoDjango from './svg/django.png';
 import reportWebVitals from './reportWebVitals';
 import logoReact from './svg/react.svg';
-import LoginForm from './components/login';
 import Accueil from './components/home';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import reactDom from '../node_modules/react-dom';
+import App from './components/App/App'
 
-
-
-
- reactDom.render(
-
+reactDom.render(
 <Jumbotron>
   <h1>Application de controle de tickets</h1>
  
+  
 
- <LoginForm/>
- 
+  </Jumbotron>,document.getElementById('Accueil'))
 
+ reactDom.render(
 
-
-
-  </Jumbotron>
+<App/>
 ,document.getElementById('ecranHD'))
 
 

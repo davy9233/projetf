@@ -1,12 +1,12 @@
 from django.contrib.auth import login
 from django.shortcuts import redirect, render
 from django.urls import reverse
-from account.forms import CustomUserCreationForm
+# from account.forms import CustomUserCreationForm
 
 def dashboard(request):
     return render(request, "account/dashboard.html")
 
-def register(request):
+""" def register(request):
     if request.method == "GET":
         return render(
             request, "account/register.html",
@@ -15,8 +15,9 @@ def register(request):
     elif request.method == "POST":
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            user =form.save()
+       
             login(request, user)
             return redirect(reverse("dashboard"))
-
+ """
     

@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
 from django.conf.urls import url
+from rest_framework.authtoken.views import obtain_auth_token
 
               
 
@@ -24,5 +25,7 @@ from django.conf.urls import url
 urlpatterns = [ 
     url(r"^", include("account.urls")),
     url(r"^admin/", admin.site.urls),
-    path('api/', include('users.urls')),
+    path('user/', include('users.urls')),
+    path('api/', include('api.urls')),
+    path('gettoken/',obtain_auth_token)
 ]
