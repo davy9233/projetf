@@ -1,9 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
 import Login from '../Login/Login';
 import Preferences from '../Preferences/Preferences';
+import Camera from '../Camera/cam';
+import Historique from '../Historique/hist';
 import useToken from './useToken';
 
 function App() {
@@ -16,14 +18,35 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Application</h1>
       <BrowserRouter>
+      <div>
+        <ul>
+          <li>
+            <Link to="/camera">camera</Link>
+          </li>
+          <li>
+            <Link to="/historique">historique</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/Preferences">parametre</Link>
+          </li>
+        </ul>
+      </div>
         <Switch>
           <Route path="/dashboard">
             <Dashboard />
           </Route>
-          <Route path="/preferences">
+          <Route path="/Preferences">
             <Preferences />
+          </Route>
+          <Route path="/camera">
+            <Camera />
+          </Route>
+          <Route path="/historique">
+            <Historique />
           </Route>
         </Switch>
       </BrowserRouter>
