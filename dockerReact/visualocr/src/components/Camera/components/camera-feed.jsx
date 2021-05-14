@@ -96,6 +96,8 @@ export class CameraFeed extends Component {
               }).catch(function (error) {
                 console.error('erreur');
               });
+
+        
         
         
         

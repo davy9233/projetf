@@ -24,6 +24,7 @@ class imageTicket(models.Model):
     prob = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2)
     uriimage = models.TextField(null=True)
     idUser= models.IntegerField(null=True)
+    image = models.ImageField(upload_to='images/',null=True)
 
 
     class Meta:
