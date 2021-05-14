@@ -34,17 +34,17 @@ reactDom.render(
   
   <Container>
     <Row>    
-      <Col >
-            <Image src= {logoPython} fluid />
+      <Col className="icone">
+            <Image  src= {logoPython}  thumbnail />
         </Col>
-      <Col >
-            <Image src= {logoPytorch} fluid  />
+      <Col className="icone" >
+            <Image src= {logoPytorch} thumbnail  />
         </Col>
-      <Col>
-            <Image src= {logoDjango} fluid />
-        </Col>
-        <Col >
-            <Image src= {logoReact} fluid />
+      <Col className="icone" >
+            <Image src= {logoDjango} thumbnail />
+        </Col >
+        <Col className="icone">
+            <Image src= {logoReact} thumbnail />
         </Col>
     </Row>
 </Container>

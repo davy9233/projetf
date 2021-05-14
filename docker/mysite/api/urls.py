@@ -6,11 +6,14 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'api', views.UserViewSet,'api')
+router.register(r'image', views.imageTicketViewset,'image')
+
 
 
 # Setup automatic URL routing
 # Additionally, we include login URLs for the browsable API.
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include(router.urls))
+
    ]

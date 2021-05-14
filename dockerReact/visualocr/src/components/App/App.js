@@ -7,6 +7,7 @@ import Preferences from '../Preferences/Preferences';
 import Camera from '../Camera/cam';
 import Historique from '../Historique/hist';
 import useToken from './useToken';
+import ButtonSortie from '../../ui/ButtonExit';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <li>
             <Link to="/Preferences">parametre</Link>
           </li>
+
         </ul>
       </div>
         <Switch>
@@ -50,7 +52,19 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+    
+      <div className="buttonSortie">
+        <ButtonSortie />
+      </div>
+
+
+
+
     </div>
+
+
+
+
   );
 }
 
